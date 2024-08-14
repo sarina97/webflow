@@ -1,0 +1,32 @@
+/* directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(/webflow/public/css/font.css);
+
+@font-face {
+  font-family: poppins;
+  src: url(/webflow/assets/font/poppins/Poppins-Bold.ttf);
+  src: url(/webflow/assets/font/poppins/Poppins-Medium.ttf);
+  src: url(/webflow/assets/font/poppins/Poppins-Regular.ttf);
+}
+@layer base {
+  body {
+    @apply font-[poppins];
+  }
+  .btn_yellow {
+    @apply font-bold text-[0.6rem] text-center w-[150px] py-[0.8rem] rounded-[1.7rem] transition-all duration-200 bg-yellow hover:bg-yellow/70 hover:text-black;
+  }
+  .btn_black {
+    @apply font-bold text-[0.8rem] text-center w-[170px] py-[0.9rem] rounded-[1.7rem] transition-all duration-200 bg-black hover:bg-black/70 text-light_gray hover:text-white;
+  }
+  .paraghraph {
+    @apply w-[100%] text-center font-bold text-[.7rem] md:text-[.7rem] lg:text-left;
+  }
+  .faq-item {
+    @apply border-b-[1px] border-gray; /* Tailwind's gray-200 */
+  }
+  .sent {
+    @apply bg-transparent text-white;
+  }
+}

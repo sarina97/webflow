@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webflow responsive tailwind</title>
+  </head>
+  <body class="font-['poppins']">
+    <!-- start project  -->
+    <div class="wrapper w-[100%] flex flex-col items-center justify-center">
+      <!-- header start -->
+      <header
+        class="w-[100%] h-[80px] px-5 flex items-center justify-center sticky inset-0 z-20 bg-tint_blue dark:bg-dark_mode_two"
+      >
+        <div
+          class="w-[80%] flex flex-row items-center justify-between mx-auto bg-tint_blue z-1000 dark:bg-dark_mode_two"
+        >
+          <div class="">
+            <h2 class="font-bold text-[25px] text-white">
+              <span> &#123;</span>Finsweet
+            </h2>
+          </div>
+          <div
+            id="menu-button"
+            class="md:hidden flex flex-col items-center justify-between gap-2"
+          >
+            <div class="w-[30px] h-[2px] bg-white"></div>
+            <div class="w-[30px] h-[2px] bg-white"></div>
+            <div class="w-[30px] h-[2px] bg-white"></div>
+          </div>
+          <div
+            class="flex items-center justify-center nav absolute top-[110%] w-[40%] md:w-fit right-[5%] bg-white/90 shadow-white md:to-transparent md:bg-transparent md:top-0 md:right-0 md:relative md:flex rounded-lg"
+          >
+            <nav
+              class="flex md:w-[100%] md:flex-row md:items-center md:justify-between text-tint_blue md:text-white"
+            >
+              <div
+                id="menu"
+                class="md:flex flex-col gap-4 items-center py-4 md:flex-row transition-all duration-150 hidden"
+              >
+                <a
+                  class="font-[100] transition-all duration-150 hover:scale-110 opacity-100 text-[.8rem] lg:text-[1rem] p-2 text-center md:p-0 flex items-center justify-end gap-2 text-white"
+                  href="/webflow/index.html"
+                  >Home
+                  <img
+                    src="./assets/images/icon/header/home.svg"
+                    alt=""
+                    class="w-[20px] md:hidden stroke-tint_blue"
+                  />
+                </a>
+                <a
+                  class="font-[200] transition-all duration-150 hover:scale-110 opacity-70 active:opacity-100 p-2 text-center md:p-0 items-center justify-end gap-2 flex text-[.8rem] lg:text-[1rem]"
+                  href="/webflow/about.html"
+                  >About us
+                  <img
+                    src="./assets/images/icon/header/about.svg"
+                    alt=""
+                    class="w-[20px] md:hidden stroke-tint_blue"
+                  />
+                </a>
+                <a
+                  class="font-[200] transition-all duration-150 hover:scale-110 opacity-70 active:opacity-100 flex items-center justify-end gap-2 p-2 text-center md:p-0 text-[.8rem] lg:text-[1rem]"
+                  href="/webflow/features.html"
+                  >Features
+                  <img
+                    src="./assets/images/icon/header/deature.svg"
+                    alt=""
+                    class="w-[20px] md:hidden stroke-tint_blue"
+                  />
+                </a>
+                <a
+                  class="font-[200] transition-all duration-150 hover:scale-110 opacity-70 active:opacity-100 flex items-center justify-end gap-2 p-2 text-center md:p-0 text-[.8rem] lg:text-[1rem]"
+                  href="/webflow/pricing.html"
+                  >Pricing
+                  <img
+                    src="./assets/images/icon/header/pricing.svg"
+                    alt=""
+                    class="w-[20px] md:hidden stroke-tint_blue"
+                  />
+                </a>
+                <a
+                  class="font-[200] transition-all duration-150 hover:scale-110 opacity-70 active:opacity-100 flex items-center justify-end gap-2 p-2 text-center md:p-0 text-[.8rem] lg:text-[1rem]"
+                  href="#fq"
+                  >F&Q
+                  <img
+                    src="./assets/images/icon/header/fq.svg"
+                    alt=""
+                    class="w-[20px] md:hidden stroke-tint_blue"
+                  />
+                </a>
+                <a
+                  class="font-[200] transition-all duration-150 hover:scale-110 opacity-70 active:opacity-100 flex items-center justify-end gap-2 p-3 text-center text-[.8rem] lg:text-[1rem] nav-link"
+                  href="/webflow/blog.html"
+                  >Blog
+                  <img
+                    src="./assets/images/icon/header/blog.svg"
+                    alt=""
+                    class="w-[20px] md:hidden stroke-tint_blue"
+                  />
+                </a>
+                <a
+                  href="/webflow/contact.html"
+                  class="border border-t-tint_blue/60 shadow-lg md:border-gray/40 w-[150px] text-center py-[0.6rem] rounded-[1.5rem] transition-all duration-150 hover:bg-gray hover:text-tint_blue block"
+                  >Contact Us</a
+                >
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <!-- home start  -->
+      <button
+        id="dark-mode-toggle"
+        class="p-2 border rounded-[50%] fixed left-[1%] top-[15%] text-[12px] text-white bg-black/80 border-white z-30"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+          />
+        </svg>
+      </button>
+
+      <!-- section one start  -->
+
+      <section
+        class="w-[100%] h-[90.4vh] px-0 md:h-[90vh] lg:h-[90.45vh] 2xl:h-[100vh] bg-tint_blue overflow-hidden relative flex flex-col items-center justify-center gap-8 lg:flex-row dark:bg-dark_mode_two"
+      >
+        <!-- h-[90.4vh]  md:h-[92vh] 2xl:h-[100vh] -->
+
+        <div
+          class="w-[90%] px-10 h-[100vh] bg-tint_blue overflow-hidden flex flex-col items-center justify-center gap-8 md:flex-row dark:bg-dark_mode_two"
+        >
+          <img
+            src="./assets/images/home/fist-page.svg"
+            alt=""
+            class="w-[420px] lg:w-[550px] md:order-2 lg:order-2"
+          />
+
+          <div
+            class="w-[90%] md:w-[40%] flex flex-col items-start gap-5 md:order-1"
+          >
+            <h1
+              class="text-center font-bold text-white text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] lg:text-left"
+            >
+              Building stellar <br />
+              websites for early startups
+            </h1>
+            <p class="paraghraph text-gray_dark/70">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <div class="flex justify-between items-center gap-20 md:w-[100%]">
+              <a class="btn_yellow" href="./work.html">View our work</a>
+              <a
+                href="#"
+                class="text-white flex text-[10px] md:text-[14px] items-center line gap-1 transition-all duration-150 md:hover:gap-4"
+                >view peicing
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section one  end-->
+
+      <!-- section two start  -->
+      <section
+        class="bg-gray dark:bg-darkmode_blue w-[100%] h-[90.4vh] mt-5 md:mt-0 px-0 md:h-[90vh] lg:h-[90.45vh] 2xl:h-[100vh] overflow-hidden flex flex-col items-center justify-center gap-8 lg:flex-row"
+      >
+        <div
+          class="w-[90%] px-10 h-[100vh] overflow-hidden flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8"
+        >
+          <div
+            class="w-[100%] lg:w-[40%] relative top-[-10%] flex flex-col items-center lg:items-start gap-4 dark:text-white"
+          >
+            <h2 class="text-[2rem] font-bold lg:text-[3rem]">How we work</h2>
+            <p class="w-[60%] paraghraph text-gray_dark">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+            <a
+              href="#"
+              class="flex items-center gap-2 text-royal_blue transition-all duration-150 hover:gap-4 dark:text-darkmode_text dark:font-bold"
+              >Get in Touch with us
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="w-[100%] lg:w-[50%] grid grid-cols-2 grid-rows-2 gap-4">
+            <div class="p-2 flex flex-col gap-2">
+              <img
+                src="./assets/images/icon/numberHome/one.svg"
+                alt=""
+                class="w-[30px] lg:w-[50px]"
+              />
+              <h2 class="font-bold text-[18px] lg:text-[30px] dark:text-white">
+                Strategy
+              </h2>
+              <p
+                class="paraghraph text-gray_dark text-[10px] md:text-[12px] text-left"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                et!
+              </p>
+            </div>
+            <div class="p-2 flex flex-col gap-2">
+              <img
+                src="./assets/images/icon/numberHome/three.svg"
+                alt=""
+                class="w-[30px] lg:w-[50px]"
+              />
+              <h2
+                class="font-bold tex text-[20px]t lg:text-[30px] dark:text-white"
+              >
+                WireFarmin
+              </h2>
+              <p
+                class="paraghraph w-[100%] text-gray_dark text-[10px] md:text-[12px] text-left"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                et!
+              </p>
+            </div>
+
+            <div class="p-2 flex flex-col gap-2 justify-start">
+              <img
+                src="./assets/images/icon/numberHome/two.svg"
+                alt=""
+                class="w-[30px] lg:w-[50px]"
+              />
+              <h2 class="font-bold text-[18px] lg:text-[30px] dark:text-white">
+                Design
+              </h2>
+              <p
+                class="paraghraph text-gray_dark text-[10px] md:text-[12px] text-left"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                et!
+              </p>
+            </div>
+            <div class="p-2 flex flex-col gap-2">
+              <img
+                src="./assets/images/icon/numberHome/four.svg"
+                alt=""
+                class="w-[30px] lg:w-[40px]"
+              />
+              <h2
+                class="font-bold text text-[18px] lg:text-[30px] dark:text-white"
+              >
+                Development
+              </h2>
+              <p
+                class="paraghraph text-gray_dark text-[10px] md:text-[12px] text-left"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                et!
+              </p>
+            </div>
+          </div>
+          <!-- <div class="flex flex-wrap flex-col -m-2 gap-3 bg-dark_blue">
+        
+        <div class="w-1/2 p-2 flex flex-col items-center gap-2">
+          <img src="./assets/images/icon/numberHome/two.svg" alt="" class="w-[20px]">
+          <h2 class="font-bold">Strategy</h2>
+          <p class="paraghraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, et!</p>
+        </div>
+        <div class="w-1/2 p-2 flex flex-col items-center gap-2">
+          <img src="./assets/images/icon/numberHome/four.svg" alt="" class="w-[20px]">
+          <h2 class="font-bold">Strategy</h2>
+          <p class="paraghraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, et!</p>
+        </div>
+       
+       </div> -->
+        </div>
+      </section>
+
+      <!-- section two end  -->
+
+      <!-- section three start -->
+      <section
+        class="bg-white dark:bg-dark_mode_two w-[100%] h-fit overflow-hidden flex flex-col items-center justify-center gap-8 lg:flex-row md:py-[1rem] py-0"
+      >
+        <div
+          class="w-[90%] px-10 h-[100%] overflow-hidden flex flex-col items-center justify-center gap-2 lg:gap-8 py-3"
+        >
+          <div class="w-[80%] flex flex-row justify-between py-[2rem] md:p-0">
+            <h2
+              class="text-[15px] lg:text-[23px] lg:font-bold dark:text-darkmode_text"
+            >
+              View our Projects
+            </h2>
+            <a
+              href="#"
+              class="flex flex-row items-center gap-2 text-[12px] transition-all duration-150 hover:gap-4 dark:text-darkmode_text"
+              >view more
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="relative grid grid-cols-3 grid-rows-2 gap-7 items-center">
+            <div
+              class="md:col-span-2 md:row-span-2 col-span-3 relative overflow-hidden"
+            >
+              <img
+                src="./assets/images/home/view-p-1.svg"
+                alt=""
+                class="relative"
+              />
+              <img
+                src="./assets/images/home/0-1-bacground.svg"
+                alt=""
+                class="absolute top-0 w-[50%]"
+              />
+            </div>
+
+            <div
+              class="md:col-span-1 md:row-span-1 col-span-3 relative w-full max-w-lg mx-auto overflow-hidden"
+            >
+              <img
+                src="./assets/images/home/view-p-3.svg "
+                class="w-full h-auto"
+                alt=""
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-tint_blue to-tint_blue/40 opacity-100"
+              ></div>
+              <div
+                class="absolute md:top-[20%] lg:top-[32%] top-[33%] flex flex-col justify-end p-7 gap-2"
+              >
+                <p
+                  class="text-white text-[20px] md:text-[15px] lg:text-[25px] font-bold"
+                >
+                  Unisaas Website <br />
+                  Design
+                </p>
+                <a
+                  href="#"
+                  class="flex flex-row items-center gap-3 text-yellow text-[12px] md:text-[12px] transition-all duration-150 hover:gap-3"
+                  >View portfolio
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="md:col-span-1 md:row-span-1 col-span-3">
+              <img
+                src="./assets/images/home/view-p-2.svg"
+                alt=""
+                class="w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section three end -->
+      <!-- section four start features  -->
+      <section
+        class="bg-accent dark:bg-dark_mode_two w-[100%] h-fit overflow-hidden flex flex-col items-center justify-center gap-5 p-6 py-[4rem]"
+      >
+        <div
+          class="flex flex-col justify-center items-center dark:text-darkmode_text"
+        >
+          <p class="text-[12px] md:text-[16px]">Features</p>
+          <h2 class="text-[15px] text-center font-bold md:text-[28px]">
+            Design that solves<br />
+            problems, one product at a time
+          </h2>
+        </div>
+
+        <div
+          class="grid gap-6 lg:grid-cols-3 lg:grid-rows-2 md:grid-cols-2 md:grid-rows-2 grid-cols-1 grid-rows-6"
+        >
+          <div
+            class="col-span-1 row-span-1 w-[350px] md:w-[370px] bg-white h-[280px] rounded-lg shadow-lg flex flex-col gap-2 items-start p-10 justify-center perspective-1000 group dark:bg-white dark:shadow-md dark:shadow-darkmode_text"
+          >
+            <div
+              class="relative w-full h-full transition-transform duration-700 preserve-3d group-hover:rotate-y-180"
+            >
+              <div
+                class="absolute w-full h-full backface-hidden flex flex-col gap-2 items-start justify-center"
+              >
+                <img src="./assets/images/home/client.svg" alt="" />
+                <h3 class="font-bold text-[18px] md:[20px]">
+                  Uses Client First
+                </h3>
+                <p class="paraghraph text-gray_dark dark:text-black/70">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                  repellat inventore rem, voluptatibus et in animi molestiae.
+                  Distinctio, ullam voluptatibus.
+                </p>
+              </div>
+              <div
+                class="absolute w-full h-full backface-hidden transform rotate-y-180 flex flex-col items-center justify-center gap-3"
+              >
+                <img src="./assets/images/home/client.svg" alt="" />
+                <h2 class="text-center text-[13px]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt, delectus. Rerum error doloribus veniam consectetur
+                  nobis labore quibusdam aliquam blanditiis.
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-span-1 row-span-1 w-[350px] md:w-[370px] bg-white h-[280px] rounded-lg shadow-lg flex flex-col gap-2 items-start p-10 justify-center perspective-1000 group dark:bg-accent dark:shadow-md dark:shadow-darkmode_text"
+          >
+            <div
+              class="relative w-full h-full transition-transform duration-700 preserve-3d group-hover:rotate-y-180"
+            >
+              <div
+                class="absolute w-full h-full backface-hidden flex flex-col gap-2 items-start justify-center"
+              >
+                <img src="./assets/images/home/revision.svg" alt="" />
+                <h3 class="font-bold text-[18px] md:[20px]">
+                  Two Free Revision Round
+                </h3>
+                <p class="paraghraph text-gray_dark dark:text-black/70">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                  repellat inventore rem, voluptatibus et in animi molestiae.
+                  Distinctio, ullam voluptatibus.
+                </p>
+              </div>
+              <div
+                class="absolute w-full h-full backface-hidden transform rotate-y-180 flex flex-col items-center justify-center gap-3"
+              >
+                <img src="./assets/images/home/revision.svg" alt="" />
+                <h2 class="text-center text-[13px]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt, delectus. Rerum error doloribus veniam consectetur
+                  nobis labore quibusdam aliquam blanditiis.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-span-1 row-span-1 w-[350px] md:w-[370px] bg-white h-[280px] rounded-lg shadow-lg flex flex-col gap-2 items-start p-10 justify-center perspective-1000 group dark:bg-white dark:shadow-md dark:shadow-darkmode_text"
+          >
+            <div
+              class="relative w-full h-full transition-transform duration-700 preserve-3d group-hover:rotate-y-180"
+            >
+              <div
+                class="absolute w-full h-full backface-hidden flex flex-col gap-2 items-start justify-center"
+              >
+                <img src="./assets/images/home/template.svg" alt="" />
+                <h3 class="font-bold text-[18px] md:[20px]">
+                  Template Customization
+                </h3>
+                <p class="paraghraph text-gray_dark dark:text-black/70">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                  repellat inventore rem, voluptatibus et in animi molestiae.
+                  Distinctio, ullam voluptatibus.
+                </p>
+              </div>
+              <div
+                class="absolute w-full h-full backface-hidden transform rotate-y-180 flex flex-col items-center justify-center gap-3"
+              >
+                <img src="./assets/images/home/template.svg" alt="" />
+                <h2 class="text-center text-[13px]">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ratione, fugiat.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-span-1 row-span-1 w-[350px] md:w-[370px] bg-white h-[280px] rounded-lg shadow-lg flex flex-col gap-2 items-start p-10 justify-center perspective-1000 group dark:bg-accent dark:shadow-md dark:shadow-darkmode_text"
+          >
+            <div
+              class="relative w-full h-full transition-transform duration-700 preserve-3d group-hover:rotate-y-180"
+            >
+              <div
+                class="absolute w-full h-full backface-hidden flex flex-col gap-2 items-start justify-center"
+              >
+                <img src="./assets/images/home/support.svg" alt="" />
+                <h3 class="font-bold text-[18px] md:[20px]">24/7 Support</h3>
+                <p class="paraghraph text-gray_dark dark:text-black/70">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                  repellat inventore rem, voluptatibus et in animi molestiae.
+                  Distinctio, ullam voluptatibus.
+                </p>
+              </div>
+              <div
+                class="absolute w-full h-full backface-hidden transform rotate-y-180 flex flex-col items-center justify-center gap-3"
+              >
+                <img src="./assets/images/home/support.svg" alt="" />
+                <h2 class="text-center text-[13px]">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ratione, fugiat.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-span-1 row-span-1 w-[350px] md:w-[370px] bg-white h-[280px] rounded-lg shadow-lg flex flex-col gap-2 items-start p-10 justify-center perspective-1000 groupdark:bg-accent dark:shadow-md dark:shadow-darkmode_text"
+          >
+            <div
+              class="relative w-full h-full transition-transform duration-700 preserve-3d group-hover:rotate-y-180"
+            >
+              <div
+                class="absolute w-full h-full backface-hidden flex flex-col gap-2 items-start justify-center"
+              >
+                <img src="./assets/images/home/quick-delivery.svg" alt="" />
+                <h3 class="font-bold text-[18px] md:[20px]">Quick Delivery</h3>
+                <p class="paraghraph text-gray_dark dark:text-black/70">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                  repellat inventore rem, voluptatibus et in animi molestiae.
+                  Distinctio, ullam voluptatibus.
+                </p>
+              </div>
+              <div
+                class="absolute w-full h-full backface-hidden transform rotate-y-180 flex flex-col items-center justify-center gap-3"
+              >
+                <img src="./assets/images/home/quick-delivery.svg" alt="" />
+                <h2 class="text-center text-[13px]">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ratione, fugiat.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-span-1 row-span-1 w-[350px] md:w-[370px] bg-white h-[280px] rounded-lg shadow-lg flex flex-col gap-2 items-start p-6 justify-center perspective-1000 group dark:bg-accent dark:shadow-md dark:shadow-darkmode_text"
+          >
+            <img src="./assets/images/home/honap.svg" alt="" />
+            <h3 class="font-bold text-[18px] md:[20px]">Hands-on approach</h3>
+            <p class="paraghraph text-gray_dark">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              repellat inventore rem, voluptatibus et in animi molestiae.
+              Distinctio, ullam voluptatibus.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section four end  -->
+
+      <!-- section five start  -->
+      <section
+        class="bg-gray w-[100%] h-fit overflow-hidden flex flex-col items-center justify-between gap-5 py-[7rem] dark:bg-darkmode_blue"
+      >
+        <div
+          class="flex flex-col justify-center items-center gap-10 md:flex-row"
+        >
+          <div class="w-[80%] md:w-[25%] flex flex-col md:items-start gap-8">
+            <h2
+              class="text-[20px] text-center font-bold md:text-left md:text-[28px] dark:text-darkmode_text"
+            >
+              What our clients say about us
+            </h2>
+            <p class="paraghraph text-gray_dark dark:text-white/70">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Architecto amet molestias mollitia quos reprehenderit maxime.
+            </p>
+          </div>
+          <div
+            class="w-[90%] md:w-[50%] flex flex-col items-center gap-8 p-7 rounded-lg md:items-start md:shadow-none md:p-0 md:rounded-none shadow-md dark:shadow-darkmode_text"
+          >
+            <div class="">
+              <h3
+                class="text-[14px] md:text-[25px] text-center md:text-left dark:text-white/80"
+              >
+                "The best agency we’ve worked with so far. They understand our
+                product and are able to add new features with a great focus."
+              </h3>
+            </div>
+            <div class="flex flex-row items-center gap-3">
+              <div class="flex flex-col gap-2 order-2">
+                <p class="text-[14px] font-bold dark:text-darkmode_text">
+                  jenny Wilson
+                </p>
+                <span class="text-[10px] dark:text-white">vice president</span>
+              </div>
+              <img
+                src="./assets/images/home/jenny.svg"
+                alt=""
+                class="order-1 rounded-full shadow-md shadow-darkmode_text"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section five end  -->
+
+      <!-- section six start  -->
+      <section
+        id="fq"
+        class="bg-white w-[100%] h-fit overflow-hidden flex flex-col items-center py-[6rem] dark:bg-dark_mode_two"
+      >
+        <div
+          class="w-[100%] relative flex flex-col justify-center items-center gap-12 md:flex-row"
+        >
+          <div
+            class="w-[70%] md:w-[20%] flex flex-col gap-5 relative md:self-start text-center md:text-left"
+          >
+            <h2
+              class="text-[20px] text-center font-bold md:text-left md:text-[28px] dark:text-darkmode_text"
+            >
+              Frequently asked questions
+            </h2>
+            <a href="" class="text-royal_blue text-[13px] dark:text-white/70"
+              >Contact us for more info</a
+            >
+          </div>
+          <div class="w-[90%] md:w-[50%]">
+            <div
+              class="w-[100%] self-start mx-auto bg-white px-8 rounded-lg dark:bg-transparent"
+            >
+              <!-- <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2> -->
+
+              <div
+                class="faq-item mb-4 transition-all duration-150 dark:bg-transparent"
+              >
+                <button
+                  class="w-full text-left flex justify-between items-center py-3 focus:outline-none dark:shadow-md"
+                  onclick="toggleFAQ(1)"
+                >
+                  <span
+                    class="font-medium flex flex-row items-center gap-2 dark:text-white"
+                  >
+                    <img
+                      src="./assets/images/icon/numfq/one.svg"
+                      alt=""
+                      class="w-[15px]"
+                    />
+                    How much time does it take?
+                  </span>
+                  <span
+                    id="icon-1"
+                    class="transform transition-transform duration-300 dark:text-white"
+                    >+</span
+                  >
+                </button>
+                <div id="answer-1" class="hidden pl-4 pr-2 text-gray-600">
+                  <p class="text-[12px] py-2 dark:text-white">
+                    about 5-10 hours
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item mb-4">
+                <button
+                  class="w-full text-left flex justify-between items-center py-3 focus:outline-none"
+                  onclick="toggleFAQ(2)"
+                >
+                  <span
+                    class="font-medium flex flex-row items-center gap-2 dark:text-white"
+                  >
+                    <img
+                      src="./assets/images/icon/numfq/two.svg"
+                      alt=""
+                      class="w-[18px]"
+                    />
+                    What is your class naming convention?</span
+                  >
+                  <span
+                    id="icon-2"
+                    class="transform transition-transform duration-300 dark:text-white"
+                    >+</span
+                  >
+                </button>
+                <div id="answer-2" class="hidden pl-4 pr-2 text-gray-600">
+                  <p class="text-[12px] py-2 dark:text-white">
+                    You can track your order by logging into your account and
+                    clicking on the 'Track Order' section.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item mb-4">
+                <button
+                  class="w-full text-left flex justify-between items-center py-3 focus:outline-none"
+                  onclick="toggleFAQ(3)"
+                >
+                  <span
+                    class="font-medium flex flex-row items-center gap-2 dark:text-white"
+                  >
+                    <img
+                      src="./assets/images/icon/numfq/three.svg"
+                      alt=""
+                      class="w-[18px]"
+                    />
+                    How do you communicate?</span
+                  >
+                  <span
+                    id="icon-3"
+                    class="transform transition-transform duration-300 dark:text-white"
+                    >+</span
+                  >
+                </button>
+                <div id="answer-3" class="hidden pl-4 pr-2 text-gray-600">
+                  <p class="text-[12px] py-2 dark:text-white">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Atque recusandae a corporis autem, sapiente deserunt
+                    repellendus repellat, quis accusantium eius illum deleniti
+                    dignissimos! Harum reprehenderit dolorem rem ullam dolor
+                    fuga?
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item mb-4">
+                <button
+                  class="w-full text-left flex justify-between items-center py-3 focus:outline-none"
+                  onclick="toggleFAQ(4)"
+                >
+                  <span
+                    class="font-medium flex flex-row items-center gap-2 dark:text-white"
+                  >
+                    <img
+                      src="./assets/images/icon/numfq/four.svg"
+                      alt=""
+                      class="w-[18px]"
+                    />
+                    I have a bigger project. Can you handle it?</span
+                  >
+                  <span
+                    id="icon-4"
+                    class="transform transition-transform duration-300 dark:text-white"
+                    >+</span
+                  >
+                </button>
+                <div id="answer-4" class="hidden pl-4 pr-2 text-gray-600">
+                  <p class="text-[12px] py-2 dark:text-white">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Earum dolorem illo necessitatibus aspernatur officia sed
+                    facere consectetur labore ipsam ullam.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item mb-4">
+                <button
+                  class="w-full text-left flex justify-between items-center py-3 focus:outline-none"
+                  onclick="toggleFAQ(5)"
+                >
+                  <span
+                    class="font-medium flex flex-row items-center gap-2 dark:text-white"
+                  >
+                    <img
+                      src="./assets/images/icon/numfq/five.svg"
+                      alt=""
+                      class="w-[18px]"
+                    />
+                    What is your class naming convention?</span
+                  >
+                  <span
+                    id="icon-5"
+                    class="transform transition-transform duration-300 dark:text-white"
+                    >+</span
+                  >
+                </button>
+                <div id="answer-5" class="hidden pl-4 pr-2 text-gray-600">
+                  <p class="text-[12px] py-2 dark:text-white">
+                    Yes, we offer 24/7 customer support through our website and
+                    phone.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section six end  -->
+
+      <!-- section seven start  -->
+      <section
+        class="bg-white w-[100%] h-[690px] overflow-hidden flex flex-col items-center pb-[3rem] mt-8"
+      >
+        <div
+          class="w-[90%] md:w-[80%] h-fit relative flex flex-col justify-center items-center md:flex-row"
+        >
+          <img
+            src="./assets/images/home/contact-photo.svg"
+            alt=""
+            class="w-[50%] h-[100%] hidden md:block"
+          />
+          <div
+            class="hidden md:block w-[50%] absolute inset-0 bg-gradient-to-t w- from-tint_blue/40 to-tint_blue/40 opacity-100"
+          ></div>
+          <div
+            class="hidden md:flex md:flex-col absolute left-[10%] top-[20%] w-[30%] gap-5"
+          >
+            <h2
+              class="text-[20px] text-white text-center font-bold md:text-left md:text-[40px]"
+            >
+              Building stellar websites for early startups
+            </h2>
+            <p class="paraghraph text-white">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+              optio nulla vel magnam voluptas quia adipisci reprehenderit magni
+              quas non?
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center gap-6 w-[100%] h-[600px] bg-tint_blue md:w-[50%] md:h-[100%] rounded-2xl md:rounded-none dark:bg-dark_mode_two"
+          >
+            <div class="w-[70%] flex flex-col gap-5">
+              <h2
+                class="text-[20px] text-center font-bold md:text-left md:text-[28px] text-white"
+              >
+                Send inquiry
+              </h2>
+              <p class="paraghraph text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </div>
+            <div class="flex w-[70%] flex-col items-center gap-3">
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Your Name"
+                class="w-[100%] p-4 border border-gray/20 bg-transparent rounded-lg placeholder:text-white/60 text-white outline-none focus:border-b-yellow transition-all duration-150"
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Email"
+                class="w-[100%] p-4 border border-gray/20 bg-transparent rounded-lg placeholder:text-white/60 text-white outline-none focus:border-b-yellow transition-all duration-150"
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Paste Your Figma Design URL"
+                class="w-[100%] p-4 border border-gray/20 bg-transparent rounded-lg placeholder:text-white/60 text-white outline-none focus:border-b-yellow transition-all duration-150"
+              />
+            </div>
+            <button
+              id="sendButton"
+              onclick="sendMessage()"
+              class="w-[65%] p-4 btn_yellow text-[14px] transition-all duration-150"
+            >
+              Send an Inquiry
+            </button>
+            <a
+              href="#"
+              class="text-white flex text-[14px] items-center line gap-1 transition-all duration-150 hover:gap-4"
+              >Get in touch with US
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- section seven end  -->
+
+      <!-- section eight blog start  -->
+      <section
+        class="bg-white w-[100%] h-fit overflow-hidden flex flex-col items-center pb-[4rem] pt-5 dark:bg-darkmode_blue"
+      >
+        <div class="w-[80%] h-fit relative flex flex-col gap-6 dark:text-white ">
+          <div
+            class="w-[80%] flex flex-row justify-center items-center md:justify-between py-[2rem] md:p-0"
+          >
+            <h2 class="text-[25px] lg:text-[30px] font-bold">Our Blog</h2>
+          </div>
+
+          <div
+            class="grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-6 "
+          >
+            <div
+              class="flex flex-col gap-4 mx-auto w-[90%] shadow-lg p-4 rounded-lg md:shadow-none md:p-0 md:rounded-none dark:shadow-sm dark:shadow-darkmode_text dark:md:shadow-none "
+            >
+              <img src="./assets/images/home/blog1.svg" alt="" />
+              <span class="text-[12px]">19 Jan 2022</span>
+              <h3 class="font-bold">
+                How one Webflow user grew his single person consultancy from
+                $0-100K in 14 months
+              </h3>
+              <p class="text-[12px]">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                accusamus facilis officiis!
+              </p>
+              <a
+                href="#"
+                class="text-black font-bold flex text-[12px] items-center line gap-2 transition-all duration-150 hover:gap-4 dark:text-darkmode_text"
+                >view peicing
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div
+              class="flex flex-col mx-auto gap-4 w-[90%] shadow-lg p-4 rounded-lg md:shadow-none md:p-0 md:rounded-none dark:shadow-sm dark:shadow-darkmode_text dark:md:shadow-none"
+            >
+              <img src="./assets/images/home/blog2.svg" alt="" />
+              <span class="text-[12px]">19 Jan 2022</span>
+              <h3 class="font-bold">
+                How one Webflow user grew his single person consultancy from
+                $0-100K in 14 months
+              </h3>
+              <p class="text-[12px]">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                accusamus facilis officiis!
+              </p>
+              <a
+                href="#"
+                class="text-black font-bold flex text-[12px] items-center line gap-2 transition-all duration-150 hover:gap-4 dark:text-darkmode_text"
+                >view peicing
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div
+              class="flex flex-col gap-4 mx-auto w-[90%] shadow-lg p-4 rounded-lg md:shadow-none md:p-0 md:rounded-none dark:shadow-sm dark:shadow-darkmode_text dark:md:shadow-none"
+            >
+              <img src="./assets/images/home/blog3.svg" alt="" />
+              <span class="text-[12px]">19 Jan 2022</span>
+              <h3 class="font-bold">
+                How one Webflow user grew his single person consultancy from
+                $0-100K in 14 months
+              </h3>
+              <p class="text-[12px]">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                accusamus facilis officiis!
+              </p>
+              <a
+                href="#"
+                class="text-black font-bold flex text-[12px] items-center line gap-2 transition-all duration-150 hover:gap-4 dark:text-darkmode_text"
+                >view peicing
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section wight blog end  -->
+
+      <!-- footer start  -->
+      <footer
+        class="bg-tint_blue w-[100%] h-fit overflow-hidden flex flex-col items-center p-[2rem] dark:bg-dark_mode_two"
+      >
+        <div
+          class="w-[80%] h-fit relative grid grid-cols-1 md:grid-cols-2 gap-12 py-10"
+        >
+          <div class="w-[85%] flex flex-col items-center mx-auto gap-10">
+            <div class="">
+              <h2
+                class="font-bold text-[25px] text-white text-center md:text-left"
+              >
+                <span> &#123;</span>Finsweet
+              </h2>
+              <p class="paraghraph text-white font-[200]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
+                maxime id minima veniam debitis rem?
+              </p>
+            </div>
+            <div
+              class="w-[60%] p-4 gap-2 bg-yellow grid grid-cols-1 md:grid-cols-2"
+            >
+              <div class="">
+                <h3 class="text-[14px] font-bold text-center md:text-left">
+                  Email me at
+                </h3>
+                <p class="paraghraph text-black/80 text-[10px]">
+                  contact@website.com
+                </p>
+              </div>
+              <div class="">
+                <h3 class="text-[14px] font-bold text-center md:text-left">
+                  Call us
+                </h3>
+                <p class="paraghraph text-black/80 text-[10px]">
+                  0927 6277 28525
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-[100%] md:w-[80%] flex flex-col items-center text-center md:text-left md:items-start gap-4"
+          >
+            <div class="">
+              <h2 class="font-bold text-[35px] text-white">Lets Talk!</h2>
+              <p
+                class="paraghraph text-white/70 w-[100%] md:w-[70%] font-[200]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
+                maxime id minima veniam debitis rem? Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Nemo, sunt?
+              </p>
+            </div>
+            <div class="flex flex-row gap-2">
+              <a href="">
+                <img
+                  src="./assets/images/icon/social/facebook.svg"
+                  alt="facebook"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="./assets/images/icon/social/switter.svg"
+                  alt="twitter"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="./assets/images/icon/social/insta.svg"
+                  alt="instagram"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="./assets/images/icon/social/linkdin.svg"
+                  alt="linkdin"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="w-[100%] bg-white flex justify-center h-[80px]">
+        <div
+          class="w-[80%] flex flex-col items-center justify-center gap-2 md:flex-row md:justify-between md:gap-0"
+        >
+          <div class="text-[14px] font-bold">
+            <span>Copyright 2022, Finsweet.com</span>
+          </div>
+          <div class="flex flex-row gap-3">
+            <a href="./index.html" class="text-[12px] md:text-[16px]">Home</a>
+            <a href="./about.html" class="text-[12px] md:text-[16px]"
+              >About us</a
+            >
+            <a href="" class="text-[12px] md:text-[16px]">Features</a>
+            <a href="" class="text-[12px] md:text-[16px]">Pricing</a>
+            <a href="" class="text-[12px] md:text-[16px]">FAQ</a>
+            <a href="" class="text-[12px] md:text-[16px]">Blog</a>
+          </div>
+        </div>
+      </div>
+      <!-- footer end  -->
+      <!-- home end  -->
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <script>
+      document
+        .getElementById("menu-button")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("menu");
+          menu.classList.toggle("hidden");
+        });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.getElementById("dark-mode-toggle");
+        const body = document.body;
+
+        // Check the local storage for dark mode preference
+        const storedTheme = localStorage.getItem("theme");
+
+        if (storedTheme === "dark") {
+          body.classList.add("dark");
+        } else {
+          body.classList.remove("dark");
+          localStorage.setItem("theme", "light"); // Ensure light mode is set by default
+        }
+
+        toggle.addEventListener("click", () => {
+          if (body.classList.contains("dark")) {
+            body.classList.remove("dark");
+            localStorage.setItem("theme", "light"); // Save user preference
+          } else {
+            body.classList.add("dark");
+            localStorage.setItem("theme", "dark"); // Save user preference
+          }
+        });
+      });
+    </script>
+
+    <script>
+      function toggleFAQ(id) {
+        const answer = document.getElementById(`answer-${id}`);
+        const icon = document.getElementById(`icon-${id}`);
+
+        if (answer.classList.contains("hidden")) {
+          answer.classList.remove("hidden");
+          icon.innerText = "-";
+          icon.classList.add("rotate-45");
+        } else {
+          answer.classList.add("hidden");
+          icon.innerText = "+";
+          icon.classList.remove("rotate-45");
+        }
+      }
+    </script>
+    <script>
+      function sendMessage() {
+        const button = document.getElementById("sendButton");
+        button.textContent = "✓ Sent";
+        button.classList.add("sent");
+        button.disabled = true; // Disable the button after sending the message
+      }
+    </script>
+  </body>
+</html>

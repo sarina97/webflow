@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- header start -->
+    <header
+      class="w-[100%] h-[80px] px-5 flex items-center justify-center sticky inset-0 z-20 bg-tint_blue dark:bg-dark_mode_two"
+    >
+      <div
+        class="w-[80%] flex flex-row items-center justify-between mx-auto bg-tint_blue z-1000 dark:bg-dark_mode_two"
+      >
+        <div class="">
+          <h2 class="font-bold text-[25px] text-white">
+            <span> &#123;</span>Finsweet
+          </h2>
+        </div>
+        <div
+          id="menu-button"
+          class="md:hidden flex flex-col items-center justify-between gap-2"
+        >
+          <div class="w-[30px] h-[2px] bg-white"></div>
+          <div class="w-[30px] h-[2px] bg-white"></div>
+          <div class="w-[30px] h-[2px] bg-white"></div>
+        </div>
+        <div
+          class="flex items-center justify-center nav absolute top-[110%] w-[40%] md:w-fit right-[5%] bg-white/90 shadow-white md:to-transparent md:bg-transparent md:top-0 md:right-0 md:relative md:flex rounded-lg"
+        >
+          <nav
+            class="flex md:w-[100%] md:flex-row md:items-center md:justify-between text-tint_blue md:text-white"
+          >
+            <div
+              id="menu"
+              class="md:flex flex-col gap-4 items-center py-4 md:flex-row transition-all duration-150 hidden"
+            >
+              <a
+                class="font-[100] transition-all duration-150 hover:scale-110 opacity-100 text-[.8rem] lg:text-[1rem] p-2 text-center md:p-0 flex items-center justify-end gap-2 text-white"
+                href="/webflow/index.html"
+                >Home
+                <img
+                  src="./assets/images/icon/header/home.svg"
+                  alt=""
+                  class="w-[20px] md:hidden stroke-tint_blue"
+                />
+              </a>
+              <a
+                class="font-[200] transition-all duration-150 hover:scale-110 opacity-70 active:opacity-100 p-2 text-center md:p-0 items-center justify-end gap-2 flex text-[.8rem] lg:text-[1rem]"
+                href="/webflow/about.html"
+                >About us
+                <img
+                  src="./assets/images/icon/header/about.svg"
+                  alt=""
+                  class="w-[20px] md:hidden stroke-tint_blue"
+                />
+              </a>
+              <a
+                class="font-[200] transition-all duration-150 hover:scale-110 opacity-70 active:opacity-100 flex items-center justify-end gap-2 p-2 text-center md:p-0 text-[.8rem] lg:text-[1rem]"
+                href="/webflow/features.html"
+                >Features
+                <img
+                  src="./assets/images/icon/header/deature.svg"
+                  alt=""
+                  class="w-[20px] md:hidden stroke-tint_blue"
+                />
+              </a>
+              <a
+                class="font-[200] transition-all duration-150 hover:scale-110 opacity-70 active:opacity-100 flex items-center justify-end gap-2 p-2 text-center md:p-0 text-[.8rem] lg:text-[1rem]"
+                href="/webflow/pricing.html"
+                >Pricing
+                <img
+                  src="./assets/images/icon/header/pricing.svg"
+                  alt=""
+                  class="w-[20px] md:hidden stroke-tint_blue"
+                />
+              </a>
+              <a
+                class="font-[200] transition-all duration-150 hover:scale-110 opacity-70 active:opacity-100 flex items-center justify-end gap-2 p-2 text-center md:p-0 text-[.8rem] lg:text-[1rem]"
+                href="#fq"
+                >F&Q
+                <img
+                  src="./assets/images/icon/header/fq.svg"
+                  alt=""
+                  class="w-[20px] md:hidden stroke-tint_blue"
+                />
+              </a>
+              <a
+                class="font-[200] transition-all duration-150 hover:scale-110 opacity-70 active:opacity-100 flex items-center justify-end gap-2 p-3 text-center text-[.8rem] lg:text-[1rem] nav-link"
+                href="/webflow/blog.html"
+                >Blog
+                <img
+                  src="./assets/images/icon/header/blog.svg"
+                  alt=""
+                  class="w-[20px] md:hidden stroke-tint_blue"
+                />
+              </a>
+              <a
+                href="/webflow/contact.html"
+                class="border border-t-tint_blue/60 shadow-lg md:border-gray/40 w-[150px] text-center py-[0.6rem] rounded-[1.5rem] transition-all duration-150 hover:bg-gray hover:text-tint_blue block"
+                >Contact Us</a
+              >
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- blog page start  -->
+    <button
+      id="dark-mode-toggle"
+      class="p-2 border rounded-[50%] fixed left-[1%] top-[15%] text-[12px] text-white bg-black/80 border-white z-30"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+        />
+      </svg>
+    </button>
+
+    <!-- section one start  -->
+    <section
+      class="bg-white w-[100%] h-fit overflow-hidden flex flex-col items-center justify-center gap-7 py-[2rem] px-5 md:px-[4rem] dark:bg-dark_mode_two "
+    >
+      <div
+        class="md:w-[85%] p-5 bg-tint_blue flex items-center flex-col gap-10 justify-center rounded-xl md:rounded-none ring-2 ring-offset-4 md:ring-0 md:bg-transparent md:ring-offset-0 "
+      >
+        <div class="flex flex-col justify-center items-center ">
+          <h2
+            class="text-[20px] text-white text-center font-bold md:text-[30px] md:text-black dark:text-white"
+          >
+            A UX Case Study on Creating a <br />
+            Studious Environment for Students
+          </h2>
+          <span class="text-[12px] text-white md:text-black dark:text-darkmode_text"
+            >Andrew Jonson Posted on 27th January 2021</span
+          >
+        </div>
+
+        <img src="./assets/images/blog/blog1.svg" alt="" class="w-[100%]" />
+      </div>
+    </section>
+    <!-- section one end  -->
+
+    <!-- section two start  -->
+    <section
+      class="bg-white w-[100%] h-fit overflow-hidden flex flex-col items-center justify-center gap-7 py-[2rem] px-5 md:px-[4rem] dark:bg-dark_mode_two dark:text-white dark:mb-2 dark:mt-1"
+    >
+      <div
+        class="md:w-[85%] p-5 flex items-center flex-col gap-10 justify-center "
+      >
+        <div class="text-center md:text-start md:w-[70%] flex flex-col gap-4 ">
+          <h2 class="text-[20px] md:text-[30px] font-bold dark:text-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </h2>
+          <p
+            class="paraghraph text-[12px] text-black/60 leading-6 font-[200] text-justify dark:text-white"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+            <span class="text-royal_blue dark:text-darkmode_text">Excepteur sint occaecat </span>
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </div>
+        <div class="text-center md:text-start md:w-[70%] flex flex-col gap-4">
+          <h2 class="text-[20px] md:text-[30px] font-bold dark:text-white">
+            Ut enim ad minim veniam, quis nostrud.
+          </h2>
+          <p
+            class="paraghraph text-[12px] text-black/60 leading-6 font-[200] text-justify dark:text-white"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+            <span class="text-royal_blue dark:text-darkmode_text">Excepteur sint occaecat </span>
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+
+          <span class="flex gap-2 items-center text-[12px] dark:text-white">
+            <svg
+              width="5"
+              height="5"
+              viewBox="0 0 5 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <ellipse
+                cx="2.4882"
+                cy="2.5"
+                rx="2.49406"
+                ry="2.5"
+                fill="#282938"
+              />
+            </svg>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+          </span>
+          <span class="flex gap-2 items-center text-[12px]">
+            <svg
+              width="5"
+              height="5"
+              viewBox="0 0 5 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <ellipse
+                cx="2.4882"
+                cy="2.5"
+                rx="2.49406"
+                ry="2.5"
+                fill="#282938"
+              />
+            </svg>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+          </span>
+          <span class="flex gap-2 items-center text-[12px]">
+            <svg
+              width="5"
+              height="5"
+              viewBox="0 0 5 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <ellipse
+                cx="2.4882"
+                cy="2.5"
+                rx="2.49406"
+                ry="2.5"
+                fill="#282938"
+              />
+            </svg>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+          </span>
+          <p
+            class="paraghraph text-[12px] text-black/60 leading-6 font-[200] text-justify dark:text-white"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <img
+          src="./assets/images/blog/readblog1.svg"
+          class="md:w-[70%]"
+          alt=""
+        />
+        <div class="text-center md:text-start md:w-[70%] flex flex-col gap-4">
+          <h2 class="text-[20px] md:text-[30px] font-bold ">
+            Ut enim ad minim veniam, quis nostrud.
+          </h2>
+          <p
+            class="paraghraph text-[12px] text-black/60 leading-6 font-[200] text-justify dark:text-white"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+            <span class="text-royal_blue dark:text-darkmode_text">Excepteur sint occaecat </span>
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- section two end  -->
+
+   <!-- footer start  -->
+   <footer
+   class="bg-tint_blue w-[100%] h-fit overflow-hidden flex flex-col items-center p-[2rem] dark:bg-dark_mode_two"
+ >
+   <div
+     class="w-[80%] h-fit relative grid grid-cols-1 md:grid-cols-2 gap-12 py-10"
+   >
+     <div class="w-[85%] flex flex-col items-center mx-auto gap-10">
+       <div class="">
+         <h2
+           class="font-bold text-[25px] text-white text-center md:text-left"
+         >
+           <span> &#123;</span>Finsweet
+         </h2>
+         <p class="paraghraph text-white font-[200]">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
+           maxime id minima veniam debitis rem?
+         </p>
+       </div>
+       <div
+         class="w-[60%] p-4 gap-2 bg-yellow grid grid-cols-1 md:grid-cols-2"
+       >
+         <div class="">
+           <h3 class="text-[14px] font-bold text-center md:text-left">
+             Email me at
+           </h3>
+           <p class="paraghraph text-black/80 text-[10px]">
+             contact@website.com
+           </p>
+         </div>
+         <div class="">
+           <h3 class="text-[14px] font-bold text-center md:text-left">
+             Call us
+           </h3>
+           <p class="paraghraph text-black/80 text-[10px]">
+             0927 6277 28525
+           </p>
+         </div>
+       </div>
+     </div>
+     <div
+       class="w-[100%] md:w-[80%] flex flex-col items-center text-center md:text-left md:items-start gap-4"
+     >
+       <div class="">
+         <h2 class="font-bold text-[35px] text-white">Lets Talk!</h2>
+         <p
+           class="paraghraph text-white/70 w-[100%] md:w-[70%] font-[200]"
+         >
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
+           maxime id minima veniam debitis rem? Lorem ipsum dolor sit amet
+           consectetur, adipisicing elit. Nemo, sunt?
+         </p>
+       </div>
+       <div class="flex flex-row gap-2">
+         <a href="">
+           <img
+             src="./assets/images/icon/social/facebook.svg"
+             alt="facebook"
+           />
+         </a>
+         <a href="">
+           <img
+             src="./assets/images/icon/social/switter.svg"
+             alt="twitter"
+           />
+         </a>
+         <a href="">
+           <img
+             src="./assets/images/icon/social/insta.svg"
+             alt="instagram"
+           />
+         </a>
+         <a href="">
+           <img
+             src="./assets/images/icon/social/linkdin.svg"
+             alt="linkdin"
+           />
+         </a>
+       </div>
+     </div>
+   </div>
+ </footer>
+ <div class="w-[100%] bg-white flex justify-center h-[80px]">
+   <div
+     class="w-[80%] flex flex-col items-center justify-center gap-2 md:flex-row md:justify-between md:gap-0"
+   >
+     <div class="text-[14px] font-bold">
+       <span>Copyright 2022, Finsweet.com</span>
+     </div>
+     <div class="flex flex-row gap-3">
+       <a href="./index.html" class="text-[12px] md:text-[16px]">Home</a>
+       <a href="./about.html" class="text-[12px] md:text-[16px]"
+         >About us</a
+       >
+       <a href="" class="text-[12px] md:text-[16px]">Features</a>
+       <a href="" class="text-[12px] md:text-[16px]">Pricing</a>
+       <a href="" class="text-[12px] md:text-[16px]">FAQ</a>
+       <a href="" class="text-[12px] md:text-[16px]">Blog</a>
+     </div>
+   </div>
+ </div>
+ <!-- footer end  -->
+
+    <script>
+      document
+        .getElementById("menu-button")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("menu");
+          menu.classList.toggle("hidden");
+        });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.getElementById("dark-mode-toggle");
+        const body = document.body;
+
+        // Check the local storage for dark mode preference
+        const storedTheme = localStorage.getItem("theme");
+
+        if (storedTheme === "dark") {
+          body.classList.add("dark");
+        } else {
+          body.classList.remove("dark");
+          localStorage.setItem("theme", "light"); // Ensure light mode is set by default
+        }
+
+        toggle.addEventListener("click", () => {
+          if (body.classList.contains("dark")) {
+            body.classList.remove("dark");
+            localStorage.setItem("theme", "light"); // Save user preference
+          } else {
+            body.classList.add("dark");
+            localStorage.setItem("theme", "dark"); // Save user preference
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
