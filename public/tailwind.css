@@ -6,9 +6,9 @@
 
 @font-face {
   font-family: poppins;
-  src: url(/webflow/assets/font/poppins/Poppins-Bold.ttf);
-  src: url(/webflow/assets/font/poppins/Poppins-Medium.ttf);
   src: url(/webflow/assets/font/poppins/Poppins-Regular.ttf);
+  src: url(/webflow/assets/font/poppins/Poppins-Medium.ttf);
+  src: url(/webflow/assets/font/poppins/Poppins-Bold.ttf);
 }
 @layer base {
   body {

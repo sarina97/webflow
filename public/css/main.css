@@ -756,14 +756,6 @@ body {
   margin-top: 2rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .block {
   display: block;
 }
@@ -949,10 +941,6 @@ body {
 
 .max-w-lg {
   max-width: 32rem;
-}
-
-.max-w-screen-2xl {
-  max-width: 1536px;
 }
 
 .flex-shrink-0 {
@@ -1635,11 +1623,11 @@ body {
 @font-face {
   font-family: poppins;
 
-  src: url(/webflow/assets/font/poppins/Poppins-Bold.ttf);
+  src: url(/webflow/assets/font/poppins/Poppins-Regular.ttf);
 
   src: url(/webflow/assets/font/poppins/Poppins-Medium.ttf);
 
-  src: url(/webflow/assets/font/poppins/Poppins-Regular.ttf);
+  src: url(/webflow/assets/font/poppins/Poppins-Bold.ttf);
 }
 
 .placeholder\:text-white\/60::-moz-placeholder {
@@ -1707,10 +1695,6 @@ body {
   margin-top: 0.25rem;
 }
 
-.dark\:mt-2:is(.dark *) {
-  margin-top: 0.5rem;
-}
-
 .dark\:rounded-lg:is(.dark *) {
   border-radius: 0.5rem;
 }
@@ -1756,11 +1740,6 @@ body {
 .dark\:bg-white:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.dark\:bg-gray_dark:is(.dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(173 174 179 / var(--tw-bg-opacity));
 }
 
 .dark\:font-bold:is(.dark *) {
